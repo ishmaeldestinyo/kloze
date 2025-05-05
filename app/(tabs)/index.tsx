@@ -9,6 +9,7 @@ import {
   View,
 } from "react-native";
 
+import TweetCard from "@/components/TweetCard";
 import { Ionicons, MaterialIcons } from "@expo/vector-icons";
 import { router } from "expo-router";
 import React from "react";
@@ -19,36 +20,28 @@ export default function HomeScreen() {
     {
       name: "Tweets",
       descr: (
-        <>
-        <Text>Tweets</Text>
-        
-        </>
+        <TweetCard title="Tweets"/>
       )
     },
     {
       name: "Tweets & Replies",
       descr: (
-        <>
-        <Text>Tweets & replies</Text>
-        
-        </>
+        <TweetCard title="Tweets & Replies"/>
+
       )
     },
     {
       name: "Media",
       descr: (
-        <>
-        <Text>Media</Text>
-        </>
+        <TweetCard title="Media"/>
+
       )
     },
     {
       name: "Likes",
       descr: (
-        <>
-        <Text>Likes</Text>
-        
-        </>
+        <TweetCard title="Likes"/>
+
       )
     },
   ];
@@ -328,7 +321,8 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
   },
   contentArea: {
-    padding: 20,
+    paddingHorizontal: 20,
+    paddingVertical: 5,
   },
   tabRow: {
     flexDirection: "row",
